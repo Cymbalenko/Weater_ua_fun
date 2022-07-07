@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/settings_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/title_section_barrier"
+        android:layout_width="0dp"
+        android:layout_height="8dp"
+        android:layout_marginTop="25dp"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="spinner_reply_degrees,textView_degrees,spinner_reply_unit"
+        />
+
+    <TextView
+        android:id="@+id/textView_degrees"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textSize="14sp"
+        android:layout_marginTop="24dp"
+        android:text="@string/reply_degrees_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner_reply_degrees"
+        android:layout_width="wrap_content"
+        android:textSize="20sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_alignParentRight="true"
+        app:layout_constraintStart_toStartOf="@+id/textView_degrees"
+        app:layout_constraintTop_toBottomOf="@+id/textView_degrees" />
+
+    <TextView
+        android:id="@+id/textView_unit"
+        android:layout_width="wrap_content"
+        android:textSize="14sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/reply_unit_title"
+        app:layout_constraintStart_toStartOf="@+id/spinner_reply_degrees"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_reply_degrees" />
+
+    <Spinner
+        android:id="@+id/spinner_reply_unit"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_alignParentRight="true"
+        app:layout_constraintStart_toStartOf="@+id/textView_unit"
+        app:layout_constraintTop_toBottomOf="@+id/textView_unit" />
+
+    <TextView
+        android:id="@+id/textView_precip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reply_precip_title"
+        android:layout_marginTop="24dp"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/spinner_reply_unit"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_reply_unit" />
+
+    <Spinner
+        android:id="@+id/spinner_reply_precip"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_alignParentRight="true"
+        app:layout_constraintStart_toStartOf="@+id/textView_precip"
+        app:layout_constraintTop_toBottomOf="@+id/textView_precip" />
+
+    <TextView
+        android:id="@+id/textView_pressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reply_pressure_title"
+        android:layout_marginTop="24dp"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/spinner_reply_precip"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_reply_precip" />
+
+    <Spinner
+        android:id="@+id/spinner_reply_pressure"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_alignParentRight="true"
+        app:layout_constraintStart_toStartOf="@+id/textView_pressure"
+        app:layout_constraintTop_toBottomOf="@+id/textView_pressure" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

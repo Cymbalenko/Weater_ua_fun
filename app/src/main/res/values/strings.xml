@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">Weather and more</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">angell666777@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Weather setting</string>
+    <string name="sync_header">Interface</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Enable dark theme</string>
+    <string name="attachment_summary_on">Dark theme</string>
+    <string name="attachment_summary_off">Light theme</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="language_ru">Russian</string>
+    <string name="language_ua">Ukrainian</string>
+    <string name="language_en">English</string>
+    <string name="celseus">Celsius</string>
+    <string name="fahrenheit">Fahrenheit</string>
+    <string name="kilometers">Kilometers</string>
+    <string name="miles">Miles</string>
+    <string name="reply_language_title">Language</string>
+    <string name="reply_degrees_title">Temperature unit</string>
+    <string name="reply_unit_title">Wind speed unit</string>
+    <string name="menu_currentDay">Weather</string>
+    <string name="feels_title">Feels like</string>
+    <string name="weather">Weather</string>
+    <string name="weather_detail">Detail</string>
+    <string name="by_days">By days</string>
+    <string name="weather_today">Today</string>
+    <string name="zero">0</string>
+    <string name="uv_low">Low</string>
+    <string name="uv_medium">Medium</string>
+    <string name="uv_high">High</string>
+    <string name="uv_very_high">Very high</string>
+    <string name="uv_extreme">Extreme</string>
+    <string name="reply_precip_title">Precipitation unit</string>
+    <string name="reply_pressure_title">Pressure</string>
+    <string name="precipitation">Precipitation</string>
+    <string name="good">Good</string>
+    <string name="moderate">Moderate</string>
+    <string name="Unhealthy_">Unhealthy for sensitive group</string>
+    <string name="unhealthy">Unhealthy</string>
+    <string name="very_unhealthy">Very Unhealthy</string>
+    <string name="hazardous">Hazardous</string>
+    <string name="unhealthy_">Unhealthy for sensitive group</string>
+</resources>

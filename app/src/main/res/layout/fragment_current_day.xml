@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/title_section_barrier_top"
+            android:layout_width="0dp"
+            android:layout_height="8dp"
+            android:layout_marginTop="25dp"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="tv_city, button_update"
+            />
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/title_section_barrier"
+            android:layout_width="0dp"
+            android:layout_height="8dp"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="iv_icon, tv_degree,tv_degree_title,
+                tv_degree_g,tv_feels_title,tv_feels_value,tv_feels_o "
+            />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/title_section_barrier_center"
+            android:layout_width="0dp"
+            android:layout_height="8dp"
+            app:barrierDirection="bottom"
+            android:orientation="vertical"
+            app:constraint_referenced_ids=""
+            />
+
+        <TextView
+            android:id="@+id/tv_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/button_update"
+            app:layout_constraintStart_toStartOf="@+id/button_update"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_last_dt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/button_update"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button_update"
+            app:layout_constraintTop_toBottomOf="@+id/tv_city" />
+        <Button
+            android:id="@+id/button_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_city" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_menu_slideshow"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/button_update"
+            app:layout_constraintStart_toStartOf="@+id/button_update"
+            app:layout_constraintTop_toBottomOf="@+id/button_update" />
+
+        <TextView
+            android:id="@+id/tv_air_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Качество воздуха"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_icon" />
+
+        <TextView
+            android:id="@+id/tv_air_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zero"
+            app:layout_constrainedWidth="true"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_air_title"
+            app:layout_constraintStart_toStartOf="@+id/tv_air_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_air_title" />
+
+        <TextView
+            android:id="@+id/tv_icon_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zero"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/iv_icon"
+            app:layout_constraintStart_toStartOf="@+id/iv_icon"
+            app:layout_constraintTop_toBottomOf="@+id/iv_icon" />
+
+        <TextView
+            android:id="@+id/tv_degree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zero"
+            android:layout_marginTop="36dp"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/iv_icon"
+            app:layout_constraintStart_toStartOf="@+id/iv_icon"
+            app:layout_constraintTop_toBottomOf="@+id/tv_icon_title" />
+
+        <TextView
+            android:id="@+id/tv_degree_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="o"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/tv_degree"
+            app:layout_constraintTop_toTopOf="@+id/tv_degree" />
+
+        <TextView
+            android:id="@+id/tv_degree_g"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="c"
+            app:layout_constraintStart_toEndOf="@+id/tv_degree"
+            app:layout_constraintTop_toBottomOf="@+id/tv_degree_title" />
+
+        <TextView
+            android:id="@+id/tv_feels_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="12sp"
+            android:text="@string/feels_title"
+            app:layout_constraintEnd_toEndOf="@+id/tv_degree"
+            app:layout_constraintStart_toStartOf="@+id/tv_degree"
+            app:layout_constraintTop_toBottomOf="@+id/tv_degree" />
+
+        <TextView
+            android:id="@+id/tv_feels_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:textSize="16sp"
+            android:text="@string/zero"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_feels_title"
+            app:layout_constraintStart_toEndOf="@+id/tv_feels_title"
+            app:layout_constraintTop_toTopOf="@+id/tv_feels_title" />
+
+        <TextView
+            android:id="@+id/tv_feels_o"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="o"
+            android:textSize="8dp"
+            app:layout_constraintStart_toEndOf="@+id/tv_feels_value"
+            app:layout_constraintTop_toTopOf="@+id/tv_feels_value" />
+
+        <TextView
+            android:id="@+id/tv_uv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="УФ-індекс"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_degree"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_degree" />
+
+        <TextView
+            android:id="@+id/tv_uv_title_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ddddddd"
+            android:textSize="12sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toTopOf="@+id/tv_uv_title"
+            app:layout_constraintEnd_toEndOf="@+id/tv_uv_title"
+            app:layout_constraintStart_toStartOf="@+id/tv_uv_title" />
+
+        <TextView
+            android:id="@+id/tv_uv_title_help_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="dddddd sdfsdfsd sdfsdfs dsfsdfsd dsfsdfsd dsfsdfsdd"
+            android:textSize="14sp"
+            android:visibility="invisible"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toTopOf="@+id/tv_uv_title_help"
+            app:layout_constraintEnd_toStartOf="@+id/iv_icon"
+            app:layout_constraintStart_toStartOf="@+id/tv_uv_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_air_value" />
+        <ImageButton
+            android:id="@+id/ib_uv_title_help"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_uv_title_help"
+            app:layout_constraintStart_toEndOf="@+id/tv_uv_title_help"
+            app:layout_constraintTop_toTopOf="@+id/tv_uv_title_help"
+            app:srcCompat="@drawable/ic_baseline_arrow_drop_up_24"/>
+
+        <TextView
+            android:id="@+id/tv_uv_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zero"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_uv_title"
+            app:layout_constraintStart_toStartOf="@+id/tv_uv_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_uv_title" />
+
+        <Button
+            android:id="@+id/button_uv_value_color"
+            android:layout_width="16dp"
+            android:layout_height="26dp"
+            android:text="Совет"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_uv_value"
+            app:layout_constraintEnd_toEndOf="@+id/tv_uv_title"
+            app:layout_constraintStart_toEndOf="@+id/tv_uv_value"
+            app:layout_constraintTop_toBottomOf="@+id/tv_uv_title" />
+
+        <TextView
+            android:id="@+id/tv_humidity_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Влажность"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_degree"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_degree" />
+
+        <TextView
+            android:id="@+id/tv_humidity_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="@string/zero"
+            app:layout_constraintEnd_toEndOf="@+id/tv_humidity_title"
+            app:layout_constraintStart_toStartOf="@+id/tv_humidity_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_humidity_title" />
+
+        <TextView
+            android:id="@+id/tv_cloud_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Облачность"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_icon" />
+
+        <TextView
+            android:id="@+id/tv_cloud_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zero"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_cloud_title"
+            app:layout_constraintStart_toStartOf="@+id/tv_cloud_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_cloud_title" />
+
+        <TextView
+            android:id="@+id/tv_wind_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold"
+            android:text="Ветер"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_feels_title" />
+
+        <TextView
+            android:id="@+id/tv_wind_speed_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Скорость"
+            app:layout_constraintStart_toStartOf="@+id/tv_wind_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_wind_title" />
+
+        <TextView
+            android:id="@+id/tv_wind_speed_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="180dp"
+            android:textSize="20sp"
+            android:text="@string/zero"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_wind_speed_title"
+            app:layout_constraintStart_toEndOf="@+id/tv_wind_title"
+            app:layout_constraintTop_toTopOf="@+id/tv_wind_speed_title" />
+
+        <TextView
+            android:id="@+id/tv_wind_speed_value_t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="8sp"
+            android:paddingStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_wind_speed_value"
+            app:layout_constraintStart_toEndOf="@+id/tv_wind_speed_value"
+            tools:ignore="RtlSymmetry,SmallSp" />
+
+        <TextView
+            android:id="@+id/tv_wind_degree_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Направление"
+            app:layout_constraintStart_toStartOf="@+id/tv_wind_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_wind_speed_title" />
+
+        <TextView
+            android:id="@+id/tv_wind_degree_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zero"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_wind_degree_title"
+            app:layout_constraintEnd_toEndOf="@+id/tv_wind_speed_value"
+            app:layout_constraintStart_toStartOf="@+id/tv_wind_speed_value"
+            app:layout_constraintTop_toTopOf="@+id/tv_wind_degree_title" />
+        <ImageButton
+            android:id="@+id/tv_wind_degree_value_i"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_wind_degree_value"
+            app:layout_constraintStart_toEndOf="@+id/tv_wind_degree_value"
+            app:layout_constraintTop_toTopOf="@+id/tv_wind_degree_value"
+            app:srcCompat="@drawable/ic_baseline_arrow_drop_up_24"/>
+        <TextView
+            android:id="@+id/tv_wind_gust_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Порыв"
+            app:layout_constraintStart_toStartOf="@+id/tv_wind_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_wind_degree_title" />
+
+        <TextView
+            android:id="@+id/tv_wind_gust_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zero"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_wind_gust_title"
+            app:layout_constraintEnd_toEndOf="@+id/tv_wind_degree_value"
+            app:layout_constraintStart_toStartOf="@+id/tv_wind_degree_value"
+            app:layout_constraintTop_toTopOf="@+id/tv_wind_gust_title" />
+
+        <TextView
+            android:id="@+id/tv_wind_gust_value_t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:textSize="8sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_wind_gust_value"
+            app:layout_constraintStart_toEndOf="@+id/tv_wind_gust_value"
+            tools:ignore="RtlSymmetry,SmallSp" />
+
+        <TextView
+            android:id="@+id/tv_other_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Прочее"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_wind_gust_title" />
+
+        <TextView
+            android:id="@+id/tv_pressure_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reply_pressure_title"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@+id/tv_other_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_other_title" />
+
+        <TextView
+            android:id="@+id/tv_pressure_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zero"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_pressure_title"
+            app:layout_constraintEnd_toEndOf="@+id/tv_wind_gust_value"
+            app:layout_constraintStart_toStartOf="@+id/tv_wind_gust_value"
+            app:layout_constraintTop_toTopOf="@+id/tv_pressure_title" />
+
+
+        <TextView
+            android:id="@+id/tv_precipitation_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/precipitation"
+            android:textSize="16sp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="@+id/tv_pressure_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pressure_title" />
+
+        <TextView
+            android:id="@+id/tv_precipitation_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zero"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_precipitation_title"
+            app:layout_constraintEnd_toEndOf="@+id/tv_pressure_value"
+            app:layout_constraintStart_toStartOf="@+id/tv_pressure_value"
+            app:layout_constraintTop_toTopOf="@+id/tv_precipitation_title" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

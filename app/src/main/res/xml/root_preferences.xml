@@ -1,0 +1,40 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/messages_header">
+
+        <ListPreference
+            app:defaultValue="@string/language_ru"
+            app:entries="@array/reply_language"
+            app:entryValues="@array/reply_language"
+            app:key="reply_language"
+            app:title="@string/reply_language_title"
+            app:useSimpleSummaryProvider="true" />
+        <ListPreference
+            app:defaultValue="@string/celseus"
+            app:entries="@array/reply_degrees"
+            app:entryValues="@array/reply_degrees"
+            app:key="reply_degrees"
+            app:title="@string/reply_degrees_title"
+            app:useSimpleSummaryProvider="true" />
+        <ListPreference
+            app:defaultValue="@string/kilometers"
+            app:entries="@array/reply_unit"
+            app:entryValues="@array/reply_unit"
+            app:key="reply_unit"
+            app:title="@string/reply_unit_title"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/sync_header">
+
+        <SwitchPreferenceCompat
+            app:key="dark_mode"
+            app:defaultValue="false"
+            app:summaryOff="@string/attachment_summary_off"
+            app:summaryOn="@string/attachment_summary_on"
+            app:title="@string/attachment_title" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+
+    app:startDestination="@+id/nav_forecast">
+
+    <fragment
+
+        android:id="@+id/nav_home"
+        android:name="com.example.weater_ua_fun.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.weater_ua_fun.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.weater_ua_fun.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_currentDay"
+        android:name="com.example.weater_ua_fun.ui.currentday.CurrentDayFragment"
+        android:label="@string/menu_currentDay"
+        tools:layout="@layout/fragment_current_day"/>
+    <fragment
+
+        android:id="@+id/nav_setting"
+        android:name="com.example.weater_ua_fun.ui.setting.SettingsFragment"
+        android:label="@string/action_settings"
+        tools:layout="@layout/fragment_settings"/>
+    <fragment
+
+        android:id="@+id/nav_forecast"
+        android:name="com.example.weater_ua_fun.ui.forecast.ForecastFragment"
+        android:label="@string/weather"
+        tools:layout="@layout/fragment_forecast"/>
+</navigation>

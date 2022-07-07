@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="reply_language">
+        <item>@string/language_ru</item>
+        <item>@string/language_ua</item>
+        <item>@string/language_en</item>
+    </string-array>
+
+    <string-array name="reply_degrees">
+        <item>@string/celseus</item>
+        <item>@string/fahrenheit</item>
+    </string-array>
+    <string-array name="reply_unit">
+        <item>@string/kilometers</item>
+        <item>@string/miles</item>
+    </string-array>
+    <string-array name="reply_precipitation_unit">
+        <item>@string/millimeters</item>
+        <item>@string/inches</item>
+    </string-array>
+    <string-array name="reply_pressure_unit">
+        <item>@string/millibars</item>
+        <item>@string/inches</item>
+    </string-array>
+</resources>
